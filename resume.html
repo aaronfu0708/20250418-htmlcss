@@ -1,5 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+<link rel="stylesheet" href="resume.css"/>
+<style>
+    :root {
+      /* --primary-color: blue */
+    }
+    .highlight {
+      /* color: var(--primary-color); */
+      outline: 3px solid gold;
+      background-color: yellow;
+    }
+  </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +18,11 @@
 </head>
 
 <body>
+    <h1>CSS 選擇器 Highlighter</h1>
+    <p>請輸入 CSS 選擇器：</p>
+    <input type="text" id="selector" />
+    <button type="button" onclick="doHighlight()">送出</button>
+    <hr>
     <h1>履歷表</h1>
 
     <section>
@@ -68,6 +84,24 @@
             taiwan
         </address>
     </footer>
+    <script>
+        function doHighlight() {
+          // 清除所有樣式
+          const allElements = document.querySelectorAll(".highlight");
+          console.log('allElements 有幾個？', allElements.length);
+          allElements.forEach((element) => {
+            element.classList.remove("highlight");
+          });
+  
+          // 取得使用者輸入的 CSS 選擇器
+          const selector = document.getElementById("selector").value;
+          console.log('selector 是什麼值？', selector);
+          const elements = document.querySelectorAll(selector);
+          elements.forEach((element) => {
+            element.classList.add("highlight");
+          });
+        }
+      </script>
 </body>
 
 </html>
