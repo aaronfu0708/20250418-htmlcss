@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>洪誠甫的履歷</title>
-    <link rel="stylesheet" href="resume.css"/>
+    <link rel="stylesheet" href="resume.css" />
     <style>
         :root {
-          /* --primary-color: blue */
+            /* --primary-color: blue */
         }
+
         .highlight {
-          /* color: var(--primary-color); */
-          outline: 3px solid rgb(48, 48, 1);
-          background-color: rgb(199, 199, 179);
+            /* color: var(--primary-color); */
+            outline: 3px solid rgb(48, 48, 1);
+            background-color: rgb(199, 199, 179);
         }
-      </style>
+    </style>
 </head>
 
 <body>
-    <h1>CSS 選擇器 Highlighter</h1>
-    <p>請輸入 CSS 選擇器：</p>
-    <input type="text" id="selector" />
-    <button type="button" onclick="doHighlight()">送出</button>
-    <hr>
-    <h1>履歷表</h1>
+
+    <h1 id="resume">履歷表</h1>
 
     <section>
 
-        <h2>洪誠甫</h2>
-        <dl>
-            <dt> 
-                gmail 
-            </dt>
 
 
-              <dd>
-                chengfu0624@gmail.com
-              </dd>
-        </dl>
-        
-        
-        
-        
-        
+
+
     </section>
     <article>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#resume">履歷表</a></li>
+                <li><a href="#about">關於我</a></li>
+                <li><a href="#skills">專長</a></li>
+                <li><a href="#experience">工作經驗</a></li>
+                <li>
+                    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">Aaron
+                    </a>
+                  
+                </li>
+                
+            </ul>
+            <input type="checkbox" id="toggleText" class="hidden">
+            <label for="toggleText" class="button">Aaron</label>
+            <div id="popupText">chengfu0624@gmail.com</div> 
+    
+        </nav>
         <h2>
             關於我
         </h2>
@@ -74,35 +78,30 @@
         <h2>
             工作經驗
         </h2>
-            <p>
-                無
-            </p>
-                
-            
+        <p>
+            無
+        </p>
+
+
     </section>
     <footer>
-        <address>
-            taiwan
-        </address>
+        <div class="box2">
+            <div class="box">
+            <div class="circle">
+                
+
+                
+            </div >
+
+        </div>
+        </div>
+        <
     </footer>
+    
     <script>
-        function doHighlight() {
-          // 清除所有樣式
-          const allElements = document.querySelectorAll(".highlight");
-          console.log('allElements 有幾個？', allElements.length);
-          allElements.forEach((element) => {
-            element.classList.remove("highlight");
-          });
-  
-          // 取得使用者輸入的 CSS 選擇器
-          const selector = document.getElementById("selector").value;
-          console.log('selector 是什麼值？', selector);
-          const elements = document.querySelectorAll(selector);
-          elements.forEach((element) => {
-            element.classList.add("highlight");
-          });
-        }
-      </script>
+
+
+    </script>
 </body>
 
 </html>
