@@ -1,11 +1,16 @@
-/* button{
-  font-weight: 900;
-  font-size:  1rem;
-  text-align: justify;
-  
-  text-decoration: underline;
-  font-variant: small-caps;} */
-
+@media screen and (max-width: 768px) {
+  /* 手機版樣式 */
+  body {
+    font-size: 1.5rem; /* 調整字體大小 */
+  }
+  .navbar {
+    padding: 5px 10px; /* 調整內邊距 */
+  }
+  .nav-links a {
+    font-size: 0.8rem; /* 調整字體大小 */
+    padding: 5px 10px; /* 調整內邊距 */
+  }
+}
 * {
   
 
